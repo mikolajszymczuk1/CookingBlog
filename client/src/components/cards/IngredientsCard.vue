@@ -1,5 +1,5 @@
 <template>
-  <div class="p-[25px] border-solid border-[1px] border-black rounded-[12px] xl:p-[59px]">
+  <div class="p-[25px] border-solid border-[1px] border-black rounded-[12px] xl:px-[59px] xl:py-[48px]">
     <h3 class="mb-[25px] text-black text-[1.25rem] font-playfair xl:text-[1.875rem]">
       Ingredients
     </h3>

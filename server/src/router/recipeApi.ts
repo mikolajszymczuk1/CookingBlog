@@ -7,9 +7,12 @@ import {
   getSingleRecipeAction,
   getRecipesPageAction,
   getRecipesPageUserAction,
+  getUserLikesAction,
   uploadRecipeImageAction,
   createRecipeAction,
   updateRecipeAction,
+  likeAction,
+  dislikeAction,
 } from '@/controller/recipeController';
 import { verifyToken } from '@/middleware/auth';
 
@@ -29,10 +32,16 @@ recipeApi.get('/dishCategories', getDishCategoriesAction);
 
 recipeApi.get('/difficultLevels', getDifficultLevelsAction);
 
+recipeApi.get('/userLikes', getUserLikesAction);
+
 recipeApi.post('/uploadRecipeImage', verifyToken, uploadRecipeImageAction);
 
 recipeApi.post('/createRecipe', verifyToken, createRecipeAction);
 
+recipeApi.post('/like', verifyToken, likeAction);
+
 recipeApi.put('/updateRecipe', verifyToken, updateRecipeAction);
+
+recipeApi.delete('/dislike', verifyToken, dislikeAction);
 
 export default recipeApi;

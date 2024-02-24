@@ -139,6 +139,10 @@ const addRemoveFavorite = (): void => {
 
 /** Like or dislike current recipe */
 const likeDislike = (): void => {
+  if (!userStore.isUserLoggedIn) {
+    router.push({ name: 'login' });
+  }
+
   console.log('Like or dislike recipe');
 };
 </script>

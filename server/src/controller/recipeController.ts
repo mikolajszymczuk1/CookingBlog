@@ -242,3 +242,42 @@ export const updateRecipeAction = async (req: Request, res: Response): Promise<v
     res.status(StatusCodesEnum.ServerError).json(new RequestError(ErrorMessagesEnum.ServerError, err));
   }
 };
+
+/**
+ * Get user likes action
+ * @param {Request} req Request
+ * @param {Response} res Response
+ */
+export const getUserLikesAction = async (req: Request, res: Response): Promise<void> => {
+  try {
+
+  } catch (err) {
+    res.status(StatusCodesEnum.ServerError).json(new RequestError(ErrorMessagesEnum.ServerError, err));
+  }
+};
+
+/**
+ * Like recipe action
+ * @param {Request} req Request
+ * @param {Response} res Response
+ */
+export const likeAction = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { userId, recipeId } = req.body;
+  } catch (err) {
+    res.status(StatusCodesEnum.ServerError).json(new RequestError(ErrorMessagesEnum.ServerError, err));
+  }
+};
+
+/**
+ * Dislike recipe action
+ * @param {Request} req Request
+ * @param {Response} res Response
+ */
+export const dislikeAction = async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { userId, recipeId } = req.body;
+  } catch (err) {
+    res.status(StatusCodesEnum.ServerError).json(new RequestError(ErrorMessagesEnum.ServerError, err));
+  }
+};
